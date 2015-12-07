@@ -1,0 +1,27 @@
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+@mixin flex-box-center($horizontal, $vertical) {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-box-pack: $horizontal;
+  -moz-box-pack: $horizontal;
+  -ms-flex-pack: $horizontal;
+  -webkit-justify-content: $horizontal;
+  justify-content: $horizontal;
+
+  -webkit-box-align: $vertical;
+  -moz-box-align: $vertical;
+  -ms-flex-align: $vertical;
+  -webkit-align-items: $vertical;
+  align-items: $vertical;
+
+  flex-direction: column;
+}

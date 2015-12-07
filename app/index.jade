@@ -1,0 +1,16 @@
+extends layouts/default
+
+block content
+  #frontPageHeader
+    canvas#headerCanvas(height="600px")
+    .headerContent
+      img#moonsvg.moon(src="/images/thats_no_moon.svg")
+      .companyName
+        h1 daft labs
+      .socialLinks
+        a(href="https://github.com/daftlabs") 
+          img.socialImage(src="/images/github_logo.png" srcset="/images/github_logo@2x.png 2x, /images/github_logo.png 1x")
+  #frontPageInfo
+    .content
+      img(src="/images/vt_stroke.png")
+      p Made in VT at Daft Labs
